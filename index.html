@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>SMIP – Mirë se vini</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(180deg, #2f9c95, #2c8e88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .login-container {
+            width: 380px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            margin-top: 8px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        form {
+            margin-top: 35px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 13px;
+            margin-bottom: 6px;
+            opacity: 0.9;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.5);
+            background: transparent;
+            color: #fff;
+            margin-bottom: 18px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .options a {
+            color: #d8ffff;
+            text-decoration: none;
+        }
+
+        .options a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: rgba(255,255,255,0.25);
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: rgba(255,255,255,0.35);
+        }
+
+        .ealbania {
+            margin-top: 25px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .more {
+            margin-top: 80px;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="logo">🎓 SMIP</div>
+
+        <h1>Mirë se vini!</h1>
+        <div class="subtitle">
+            Sistemi i Menaxhimit të Informacionit Parauniversitar
+        </div>
+
+        <form>
+            <label>Përdoruesi</label>
+            <input type="text" placeholder="Përdoruesi">
+
+            <label>Fjalëkalimi</label>
+            <input type="password" placeholder="Fjalëkalimi">
+
+            <div class="options">
+                <label>
+                    <input type="checkbox"> Më mbaj mend
+                </label>
+                <a href="#">Harrova fjalëkalimin?</a>
+            </div>
+
+            <button type="submit">→ Hyr</button>
+        </form>
+
+        <div class="ealbania">
+            🔴 Identifikohu nëpërmjet E-Albania
+        </div>
+
+        <div class="more">Më shumë ↓</div>
+
+    </div>
+
+</body>
+</html>
