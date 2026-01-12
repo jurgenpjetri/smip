@@ -1,159 +1,67 @@
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="al">
 <head>
-    <meta charset="UTF-8">
-    <title>SMIP – Mirë se vini</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="zM16qrodbAKBiXMeh3mtbMxV1i2ZmmmN5fe3h1ud">
+
+    <title>SMIP</title>
+
+    <!-- Styles -->
+    <link href="/css/vendor.css?id=8df0c0ee39edf741ce520eee9b3c234b" rel="stylesheet">
+    <link href="/css/main.css?id=b52b8befb0393c0b54bfc5e42516b3b7" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCB5KCN8ZG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CCB5KCN8ZG');
+    </script>
+
+    <script>
+        window.Laravel = {"csrfToken":"zM16qrodbAKBiXMeh3mtbMxV1i2ZmmmN5fe3h1ud","user":null,"roles":[]};
+        window.i18n = {
+  "api.success_message": "Sukses!",
+  "api.error_message": "Diçka shkoi keq. Ju lutem provoni sërish!",
+  "api.resource_not_found": "E dhëna nuk u gjend!",
+  "activated": "aktivizua",
+  "deactivated": "ç'aktivizua",
+  "activate": "aktivizua",
+  "deactivate": "ç'aktivizua",
+  "errors.no_confirmation_code": "Kodi i konfirmimit mungon!",
+  "errors.wrong_confirmation_code": "Kod i gabuar për konfirmimin e llogarisë!",
+  "account_activated": "Llogaria juaj u aktivizua!",
+  "account.activation_form": "Aktivizimi i llogarisë",
+  "twoStep.fail": "OTP i skaduar"
+}
+;
+        // document.onselectstart = function() { return false; }
+    </script>
     <style>
-        * {
-            box-sizing: border-box;
-            font-family: "Segoe UI", Tahoma, sans-serif;
-        }
-
-        body {
-            margin: 0;
-            height: 100vh;
-            background: linear-gradient(180deg, #2f9c95, #2c8e88);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-        }
-
-        .login-container {
-            width: 380px;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 22px;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 36px;
-            font-weight: 500;
-        }
-
-        .subtitle {
-            margin-top: 8px;
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        form {
-            margin-top: 35px;
-        }
-
-        label {
-            display: block;
-            text-align: left;
-            font-size: 13px;
-            margin-bottom: 6px;
-            opacity: 0.9;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 14px;
-            border-radius: 6px;
-            border: 1px solid rgba(255,255,255,0.5);
-            background: transparent;
-            color: #fff;
-            margin-bottom: 18px;
-            outline: none;
-            font-size: 14px;
-        }
-
-        input::placeholder {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .options {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 13px;
-            margin-bottom: 20px;
-        }
-
-        .options a {
-            color: #d8ffff;
-            text-decoration: none;
-        }
-
-        .options a:hover {
-            text-decoration: underline;
-        }
-
-        button {
-            width: 100%;
-            padding: 14px;
-            background: rgba(255,255,255,0.25);
-            border: none;
-            border-radius: 6px;
-            color: #fff;
-            font-size: 15px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: rgba(255,255,255,0.35);
-        }
-
-        .ealbania {
-            margin-top: 25px;
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        .more {
-            margin-top: 80px;
-            font-size: 13px;
-            opacity: 0.7;
+        *:not(.quillWrapper > *) {
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          -o-user-select: none;
+          user-select: none;
         }
     </style>
 </head>
-
 <body>
+<div id="app">
+    <app :data="null"
+        message="">
+    </app>
+</div>
 
-    <div class="login-container">
-
-        <div class="logo">🎓 SMIP</div>
-
-        <h1>Mirë se vini!</h1>
-        <div class="subtitle">
-            Sistemi i Menaxhimit të Informacionit Parauniversitar
-        </div>
-
-        <form>
-            <label>Përdoruesi</label>
-            <input type="text" placeholder="Përdoruesi">
-
-            <label>Fjalëkalimi</label>
-            <input type="password" placeholder="Fjalëkalimi">
-
-            <div class="options">
-                <label>
-                    <input type="checkbox"> Më mbaj mend
-                </label>
-                <a href="#">Harrova fjalëkalimin?</a>
-            </div>
-
-            <button type="submit">→ Hyr</button>
-        </form>
-
-        <div class="ealbania">
-            🔴 Identifikohu nëpërmjet E-Albania
-        </div>
-
-        <div class="more">Më shumë ↓</div>
-
-    </div>
-
+<!-- Scripts -->
+<script src="/js/app.js?id=b7da6f1d76cedc7fc034347a3acb86da" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"057156ad03e94a05a1af3f3aa9a7bf0c","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
